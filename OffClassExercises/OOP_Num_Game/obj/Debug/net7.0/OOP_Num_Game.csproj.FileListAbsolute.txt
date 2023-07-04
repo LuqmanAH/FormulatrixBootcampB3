@@ -1,0 +1,15 @@
+c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\OffClassExercises\OOP_Num_Game\bin\Debug\net7.0\OOP_Num_Game.exe
+c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\OffClassExercises\OOP_Num_Game\bin\Debug\net7.0\OOP_Num_Game.deps.json
+c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\OffClassExercises\OOP_Num_Game\bin\Debug\net7.0\OOP_Num_Game.runtimeconfig.json
+c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\OffClassExercises\OOP_Num_Game\bin\Debug\net7.0\OOP_Num_Game.dll
+c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\OffClassExercises\OOP_Num_Game\bin\Debug\net7.0\OOP_Num_Game.pdb
+c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\OffClassExercises\OOP_Num_Game\obj\Debug\net7.0\OOP_Num_Game.csproj.AssemblyReference.cache
+c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\OffClassExercises\OOP_Num_Game\obj\Debug\net7.0\OOP_Num_Game.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\OffClassExercises\OOP_Num_Game\obj\Debug\net7.0\OOP_Num_Game.AssemblyInfoInputs.cache
+c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\OffClassExercises\OOP_Num_Game\obj\Debug\net7.0\OOP_Num_Game.AssemblyInfo.cs
+c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\OffClassExercises\OOP_Num_Game\obj\Debug\net7.0\OOP_Num_Game.csproj.CoreCompileInputs.cache
+c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\OffClassExercises\OOP_Num_Game\obj\Debug\net7.0\OOP_Num_Game.dll
+c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\OffClassExercises\OOP_Num_Game\obj\Debug\net7.0\refint\OOP_Num_Game.dll
+c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\OffClassExercises\OOP_Num_Game\obj\Debug\net7.0\OOP_Num_Game.pdb
+c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\OffClassExercises\OOP_Num_Game\obj\Debug\net7.0\OOP_Num_Game.genruntimeconfig.cache
+c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\OffClassExercises\OOP_Num_Game\obj\Debug\net7.0\ref\OOP_Num_Game.dll

@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "Day2/1.0.0": {
+      "OOP_Num_Game/1.0.0": {
         "runtime": {
-          "Day2.dll": {}
+          "OOP_Num_Game.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Day2/1.0.0": {
+    "OOP_Num_Game/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
