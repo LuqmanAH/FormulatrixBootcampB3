@@ -2,38 +2,38 @@ namespace Planetarium;
 
 public class Planet
 {
-    public string planetName{get; private set;}
+    public string PlanetName{get; private set;}
     private string _planetType;
-    public int planetDensity{private get; set;}
-    public int planetTemperature{private get; set;}
+    public int PlanetDensity{private get; set;}
+    public int PlanetTemperature{private get; set;}
 
-    public Planet(string planetName, string planetType)
+    public Planet(string PlanetName, string planetType)
     {
-        this.planetName = planetName;
+        this.PlanetName = PlanetName;
         this._planetType = planetType;
     }
 
     public void PlanetOrbit()
     {
-        if (this.planetName == "Dead Planet :(")
+        if (this.PlanetName == "Dead Planet :(")
         {
-            Console.WriteLine($"I can't do that, i'm a {this.planetName}");
+            Console.WriteLine($"I can't do that, i'm a {this.PlanetName}");
         }
         else{
-            Console.WriteLine($"Planet {planetName} is now orbitting");
+            Console.WriteLine($"Planet {PlanetName} is now orbitting");
         }
     }
 
     public void DoomsDay()
     {
-        Console.WriteLine($"Commencing doomsday to {this.planetName}...");
-        Console.WriteLine($"{this.planetName} name is now Dead Planet");
-        this.planetName = "Dead Planet :(";
+        Console.WriteLine($"Commencing doomsday to {this.PlanetName}...");
+        Console.WriteLine($"{this.PlanetName} name is now Dead Planet");
+        this.PlanetName = "Dead Planet :(";
     }
 
     public bool IsLifeSupporting()
     {
-        if (this.planetDensity <= 356 && this.planetTemperature <= 40 && _planetType != "GasGiant")
+        if (this.PlanetDensity <= 356 && this.PlanetTemperature <= 40 && _planetType != "GasGiant")
         {
             return true;
         }
@@ -45,6 +45,6 @@ public class Planet
 
     public void Populate(string species)
     {
-        Console.WriteLine($"there are {species} living in this {this.planetName} now");
+        Console.WriteLine($"there are {species} living in this {this.PlanetName} now");
     }
 }

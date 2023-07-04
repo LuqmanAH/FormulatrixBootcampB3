@@ -28,14 +28,14 @@ class program
 
         Console.WriteLine();
 
-        Earth.planetDensity = 340;
-        Earth.planetTemperature = 25;
+        Earth.PlanetDensity = 340;
+        Earth.PlanetTemperature = 25;
 
-        Jupyter.planetDensity = 330;
-        Jupyter.planetTemperature = 35;
+        Jupyter.PlanetDensity = 330;
+        Jupyter.PlanetTemperature = 35;
 
-        Mercury.planetDensity = 320;
-        Mercury.planetTemperature = 60;
+        Mercury.PlanetDensity = 320;
+        Mercury.PlanetTemperature = 60;
         Console.WriteLine();
         Console.WriteLine("Is Earth Liveable?");
         Console.WriteLine(Earth.IsLifeSupporting());
