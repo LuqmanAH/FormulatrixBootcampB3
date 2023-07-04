@@ -10,14 +10,14 @@ public class Planet
     public Planet(string PlanetName, string planetType)
     {
         this.PlanetName = PlanetName;
-        this._planetType = planetType;
+        _planetType = planetType;
     }
 
     public void PlanetOrbit()
     {
-        if (this.PlanetName == "Dead Planet :(")
+        if (PlanetName == "Dead Planet :(")
         {
-            Console.WriteLine($"I can't do that, i'm a {this.PlanetName}");
+            Console.WriteLine($"I can't do that, i'm a {PlanetName}");
         }
         else{
             Console.WriteLine($"Planet {PlanetName} is now orbitting");
@@ -26,14 +26,14 @@ public class Planet
 
     public void DoomsDay()
     {
-        Console.WriteLine($"Commencing doomsday to {this.PlanetName}...");
-        Console.WriteLine($"{this.PlanetName} name is now Dead Planet");
-        this.PlanetName = "Dead Planet :(";
+        Console.WriteLine($"Commencing doomsday to {PlanetName}...");
+        Console.WriteLine($"{PlanetName} name is now Dead Planet");
+        PlanetName = "Dead Planet :(";
     }
 
     public bool IsLifeSupporting()
     {
-        if (this.PlanetDensity <= 356 && this.PlanetTemperature <= 40 && _planetType != "GasGiant")
+        if (PlanetDensity <= 356 && PlanetTemperature <= 40 && _planetType != "GasGiant")
         {
             return true;
         }
@@ -43,8 +43,16 @@ public class Planet
         }
     }
 
-    public void Populate(string species)
+    public void Populate(string species, bool planetStatus)
     {
-        Console.WriteLine($"there are {species} living in this {this.PlanetName} now");
+
+        if (planetStatus == true)
+        {
+            Console.WriteLine($"there are {species} living in {PlanetName} now");
+        }
+        else
+        {
+            Console.WriteLine($"{PlanetName} is not habitable.");
+        }
     }
 }

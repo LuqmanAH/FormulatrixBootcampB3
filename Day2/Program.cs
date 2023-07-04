@@ -2,49 +2,56 @@
 using Planetarium;
 
 namespace Galaxy;
-class program
+class Program
 {
     static void Main()
     {
-        Planet Earth = new Planet("Earth", "IntraSolar");
-        Planet Mercury = new Planet("Mercury", "Dwarf");
-        Planet Jupyter = new Planet("Jupyter", "GasGiant");
-        Planet X56B8E = new Planet("X56B8E", "ExtraSolar");
+        Planet earth = new ("earth", "IntraSolar");
+        Planet mercury = new ("mercury", "Dwarf");
+        Planet jupyter = new ("jupyter", "GasGiant");
+        Planet x56B8E = new ("x56B8E", "ExtraSolar");
 
         Console.WriteLine();
 
-        Earth.PlanetOrbit();
-        Mercury.PlanetOrbit();
+        earth.PlanetOrbit();
+        mercury.PlanetOrbit();
 
         Console.WriteLine();
 
-        Earth.Populate("Humans");
-        Mercury.Populate("Aliens");
+        bool earthStatus = earth.IsLifeSupporting();
+        bool mercuryStatus = mercury.IsLifeSupporting();
+        bool jupyterStatus = jupyter.IsLifeSupporting();
 
+        earth.Populate("Humans", earthStatus);
+        mercury.Populate("Aliens", mercuryStatus);
+        jupyter.Populate("Minotaurs", jupyterStatus);
         Console.WriteLine();
 
-        Mercury.DoomsDay();
-        Mercury.PlanetOrbit();
-
+        mercury.DoomsDay();
+        mercury.PlanetOrbit();
         Console.WriteLine();
 
-        Earth.PlanetDensity = 340;
-        Earth.PlanetTemperature = 25;
+        earth.PlanetDensity = 340;
+        earth.PlanetTemperature = 25;
 
-        Jupyter.PlanetDensity = 330;
-        Jupyter.PlanetTemperature = 35;
+        jupyter.PlanetDensity = 330;
+        jupyter.PlanetTemperature = 35;
 
-        Mercury.PlanetDensity = 320;
-        Mercury.PlanetTemperature = 60;
+        mercury.PlanetDensity = 320;
+        mercury.PlanetTemperature = 60;
+
         Console.WriteLine();
-        Console.WriteLine("Is Earth Liveable?");
-        Console.WriteLine(Earth.IsLifeSupporting());
-        // Console.WriteLine();
-        Console.WriteLine("Is Jupyter Liveable?");
-        Console.WriteLine(Jupyter.IsLifeSupporting());
-        // Console.WriteLine();
-        Console.WriteLine("Is Mercury Liveable?");
-        Console.WriteLine(Mercury.IsLifeSupporting());
+        Console.WriteLine("Is earth Habitable?");
+        Console.WriteLine(earth.IsLifeSupporting());
+
+        Console.WriteLine("Is jupyter Habitable?");
+        Console.WriteLine(jupyter.IsLifeSupporting());
+
+        Console.WriteLine("Is mercury Habitable?");
+        Console.WriteLine(mercury.IsLifeSupporting());
+
+        Console.WriteLine("Is X Habitable?");
+        Console.WriteLine(x56B8E.IsLifeSupporting());
 
     }
 

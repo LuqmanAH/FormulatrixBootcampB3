@@ -13,3 +13,18 @@ C:\Users\Batch 3\Solution Folder\Day2\obj\Debug\net7.0\refint\Day2.dll
 C:\Users\Batch 3\Solution Folder\Day2\obj\Debug\net7.0\Day2.pdb
 C:\Users\Batch 3\Solution Folder\Day2\obj\Debug\net7.0\Day2.genruntimeconfig.cache
 C:\Users\Batch 3\Solution Folder\Day2\obj\Debug\net7.0\ref\Day2.dll
+C:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day2\bin\Debug\net7.0\Day2.exe
+C:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day2\bin\Debug\net7.0\Day2.deps.json
+C:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day2\bin\Debug\net7.0\Day2.runtimeconfig.json
+C:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day2\bin\Debug\net7.0\Day2.dll
+C:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day2\bin\Debug\net7.0\Day2.pdb
+C:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day2\obj\Debug\net7.0\Day2.csproj.AssemblyReference.cache
+C:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day2\obj\Debug\net7.0\Day2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day2\obj\Debug\net7.0\Day2.AssemblyInfoInputs.cache
+C:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day2\obj\Debug\net7.0\Day2.AssemblyInfo.cs
+C:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day2\obj\Debug\net7.0\Day2.csproj.CoreCompileInputs.cache
+C:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day2\obj\Debug\net7.0\Day2.dll
+C:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day2\obj\Debug\net7.0\refint\Day2.dll
+C:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day2\obj\Debug\net7.0\Day2.pdb
+C:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day2\obj\Debug\net7.0\Day2.genruntimeconfig.cache
+C:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day2\obj\Debug\net7.0\ref\Day2.dll

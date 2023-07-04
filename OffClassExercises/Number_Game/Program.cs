@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
-class program
+class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         Random random = new Random();
         bool restart = true;
@@ -16,7 +16,6 @@ class program
         {
             guess = 0;
             GuessCount = 0;
-            response = "";
             number = random.Next(Minimum, Maximum + 1);
 
             while (guess != number)
