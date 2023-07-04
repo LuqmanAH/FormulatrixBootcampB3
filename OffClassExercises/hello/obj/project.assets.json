@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Programming\\cSharp\\hello\\hello.csproj",
+      "projectUniqueName": "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\hello\\hello.csproj",
       "projectName": "hello",
-      "projectPath": "C:\\Users\\user\\Programming\\cSharp\\hello\\hello.csproj",
+      "projectPath": "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\hello\\hello.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Programming\\cSharp\\hello\\obj\\",
+      "outputPath": "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\hello\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Programming\\cSharp\\Number_Game\\Number_Game.csproj": {}
+    "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\Number_Game\\Number_Game.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Programming\\cSharp\\Number_Game\\Number_Game.csproj": {
+    "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\Number_Game\\Number_Game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Programming\\cSharp\\Number_Game\\Number_Game.csproj",
+        "projectUniqueName": "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\Number_Game\\Number_Game.csproj",
         "projectName": "Number_Game",
-        "projectPath": "C:\\Users\\user\\Programming\\cSharp\\Number_Game\\Number_Game.csproj",
+        "projectPath": "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\Number_Game\\Number_Game.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Programming\\cSharp\\Number_Game\\obj\\",
+        "outputPath": "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\Number_Game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
