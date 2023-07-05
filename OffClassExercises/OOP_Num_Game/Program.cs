@@ -1,8 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using System.Security.Cryptography.X509Certificates;
 using GameDataLibrary;
 using GameLogicLibrary;
 using UserInterfaceLibrary;
+
+/*
+TODO: Implement OOP Pillar: Inheritance
+TODO: Implement
+*/
 public class Program
 {
     public static void Main()
@@ -26,11 +30,11 @@ public class Program
 
                 if (guess > randomNumber)
                 {
-                    Console.WriteLine($"{guess} is to high from the actual number!");
+                    Console.WriteLine($"{guess} is too high from the actual number!");
                 }
                 else if (guess < randomNumber)
                 {
-                    Console.WriteLine($"{guess} is to low from the actual number!");
+                    Console.WriteLine($"{guess} is too low from the actual number!");
                 }
                 guessCount ++;
             }

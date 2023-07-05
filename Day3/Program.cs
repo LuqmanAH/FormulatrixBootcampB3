@@ -72,7 +72,7 @@ public class SavingsAccount : BankAccount
     }
     public override double Deposit(double amount)
     {
-        this.AccountBalance += amount;
+        AccountBalance += amount;
         return AccountBalance;
     }
     public override double Withdraw(double amount)
@@ -91,12 +91,12 @@ public class SavingsAccount : BankAccount
     }
 }
 
-public class program
+public class Program
 {
     public static void Main()
     {
         // SavingAccount Instance
-        SavingsAccount savingsAccount1 = new SavingsAccount("Hendrik Sudrajat", 56478832, 45690.40, 5, 0.35);
+        SavingsAccount savingsAccount1 = new("Hendrik Sudrajat", 56478832, 45690.40, 5, 0.35);
         double withdrawMoney = 100.0;
         double depositMoney = 500.0;
         double currBalance = savingsAccount1.Withdraw(withdrawMoney);
@@ -109,7 +109,7 @@ public class program
             $"Successfully deposited {depositMoney} to {savingsAccount1.AccountName}. Balance is now {depoBalance}\n");
 
         // CheckingAccount Instance
-        CheckingAccount checkAccount1 = new CheckingAccount("Slamet Riyadi", 678832, 145690.40, -345);
+        CheckingAccount checkAccount1 = new("Slamet Riyadi", 678832, 145690.40, -345);
         checkAccount1.CloseAccount();
     }
 }
