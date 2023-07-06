@@ -55,7 +55,7 @@ public class CheckingAccount : BankAccount, ICloseAccount
     }
     public void CloseAccount()
     {
-        Console.WriteLine($"{this.AccountName} Account has successfully closed and your entire balance is now ours");
+        Console.WriteLine($"{this.AccountName} Checking Account has successfully closed and your entire balance is now ours");
     }
 }
 
@@ -88,6 +88,10 @@ public class SavingsAccount : BankAccount
     public double CalculateInterest(){
         this.balanceAfterInterest = AccountBalance * savingDuration * interestRate;
         return balanceAfterInterest;
+    }
+    public void CloseAccount()
+    {
+        Console.WriteLine($"{this.AccountName} Saving Account has successfully closed and your entire balance is now ours");
     }
 }
 
