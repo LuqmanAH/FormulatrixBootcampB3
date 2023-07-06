@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\Day2\\Day2.csproj": {}
+    "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\Day2\\Day2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\Day2\\Day2.csproj": {
+    "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\Day2\\Day2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\Day2\\Day2.csproj",
+        "projectUniqueName": "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\Day2\\Day2.csproj",
         "projectName": "Day2",
-        "projectPath": "C:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\Day2\\Day2.csproj",
+        "projectPath": "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\Day2\\Day2.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\Day2\\obj\\",
+        "outputPath": "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\Day2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
