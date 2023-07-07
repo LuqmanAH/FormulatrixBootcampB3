@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Batch 3\\Solution Folder\\OffClassExercises\\OOP_Num_Game\\OOP_Num_Game.csproj": {}
+    "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\OOP_Num_Game\\OOP_Num_Game.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Batch 3\\Solution Folder\\OffClassExercises\\OOP_Num_Game\\OOP_Num_Game.csproj": {
+    "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\OOP_Num_Game\\OOP_Num_Game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Batch 3\\Solution Folder\\OffClassExercises\\OOP_Num_Game\\OOP_Num_Game.csproj",
+        "projectUniqueName": "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\OOP_Num_Game\\OOP_Num_Game.csproj",
         "projectName": "OOP_Num_Game",
-        "projectPath": "c:\\Users\\Batch 3\\Solution Folder\\OffClassExercises\\OOP_Num_Game\\OOP_Num_Game.csproj",
-        "packagesPath": "C:\\Users\\Batch 3\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Batch 3\\Solution Folder\\OffClassExercises\\OOP_Num_Game\\obj\\",
+        "projectPath": "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\OOP_Num_Game\\OOP_Num_Game.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\OOP_Num_Game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Batch 3\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }
