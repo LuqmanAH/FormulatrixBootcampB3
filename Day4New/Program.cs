@@ -17,11 +17,16 @@ public class MainProgram
         
         List<ILibraryItem> items = bookShelf1.GetItems();
 
-        Console.WriteLine(items.Count);
+        // Console.WriteLine(items.Count);
         Console.WriteLine(items[0].GetTitle());
+        Console.WriteLine(items[0].GetAuthor());
+        Console.WriteLine(items[0].GetPublicationYear());
+        
         //* Line below will result in build failure when uncommented
         // Console.WriteLine(items[0].CoverType());
-
+        Console.WriteLine("");
         Console.WriteLine(items[1].GetTitle());
+        Console.WriteLine(items[1].GetAuthor());
+        Console.WriteLine(items[1].GetPublicationYear());
     }
 }

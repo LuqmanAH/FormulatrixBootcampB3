@@ -8,8 +8,5 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Program.cs" />
-    <Content Include="Classes\CompositeClassShelf.cs" />
-    <Content Include="Interfaces\ILibraryItem.cs" />
-    <Content Include="Classes\ClassBook.cs" />
   </ItemGroup>
 </Project>
