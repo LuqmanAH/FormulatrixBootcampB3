@@ -13,3 +13,18 @@ c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day4New\obj\Debug\net7.0
 c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day4New\obj\Debug\net7.0\Day4New.pdb
 c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day4New\obj\Debug\net7.0\Day4New.genruntimeconfig.cache
 c:\Users\user\Programming\C_Sharp\FormulatrixBootcampB3\Day4New\obj\Debug\net7.0\ref\Day4New.dll
+c:\Users\Batch 3\Solution Folder\Day4New\obj\Debug\net7.0\Day4New.csproj.AssemblyReference.cache
+c:\Users\Batch 3\Solution Folder\Day4New\obj\Debug\net7.0\Day4New.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Batch 3\Solution Folder\Day4New\obj\Debug\net7.0\Day4New.AssemblyInfoInputs.cache
+c:\Users\Batch 3\Solution Folder\Day4New\obj\Debug\net7.0\Day4New.AssemblyInfo.cs
+c:\Users\Batch 3\Solution Folder\Day4New\obj\Debug\net7.0\Day4New.csproj.CoreCompileInputs.cache
+c:\Users\Batch 3\Solution Folder\Day4New\obj\Debug\net7.0\Day4New.dll
+c:\Users\Batch 3\Solution Folder\Day4New\obj\Debug\net7.0\refint\Day4New.dll
+c:\Users\Batch 3\Solution Folder\Day4New\obj\Debug\net7.0\Day4New.pdb
+c:\Users\Batch 3\Solution Folder\Day4New\bin\Debug\net7.0\Day4New.exe
+c:\Users\Batch 3\Solution Folder\Day4New\bin\Debug\net7.0\Day4New.deps.json
+c:\Users\Batch 3\Solution Folder\Day4New\bin\Debug\net7.0\Day4New.runtimeconfig.json
+c:\Users\Batch 3\Solution Folder\Day4New\bin\Debug\net7.0\Day4New.dll
+c:\Users\Batch 3\Solution Folder\Day4New\bin\Debug\net7.0\Day4New.pdb
+c:\Users\Batch 3\Solution Folder\Day4New\obj\Debug\net7.0\Day4New.genruntimeconfig.cache
+c:\Users\Batch 3\Solution Folder\Day4New\obj\Debug\net7.0\ref\Day4New.dll
