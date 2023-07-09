@@ -1,5 +1,4 @@
-﻿using Day4ParentInterfaces;
-using Day4Classes;
+﻿using Day4Classes;
 
 namespace Program;
 

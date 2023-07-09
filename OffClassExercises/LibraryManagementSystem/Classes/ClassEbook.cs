@@ -1,63 +1,22 @@
-using Day4ChildInterfaces;
-namespace Day4Classes;
+// using LibraryInterfaces;
+namespace LibraryItem;
 
-public class ElectronicThesis : IEbook
+public class ElectronicThesis
 {
-    public int pageCount;
-    public string publicationYear; 
-    public string? author;
-    public string? title;
-    public string fileExtension;
-    private static int _idCounter = 1;
-    public static int EBookID {
-        get{return _idCounter;}
+    private static int _idCounter = 0;
+    public ElectronicThesis()
+    {
+        ID = _idCounter++;
     }
+    public int ID { get; set; }
+    public string? Title{get; set;}
+    public string? Author{get; set;}
 
-    public ElectronicThesis(int pageCount, string publicationYear, string? author, string title, string fileExtension)
-    {
-        _idCounter ++;
-        this.pageCount = pageCount;
-        this.publicationYear = publicationYear;
-        this.author = author;
-        this.fileExtension = fileExtension;
-        this.title = title;
-    }
-    public int FileSize()
-    {
-        int fileSize;
-        fileSize = 8 * (pageCount / 100);
-        
-        return fileSize;
-    }
+    public int PublicationYear{get; set;}
 
-    public string? GetAuthor()
-    {
-        return author;
-    }
+    public int NumberOfPage{get; set;}
 
-    public string GetPublicationYear()
-    {
-        return publicationYear;
-    }
+    public int Filesize{get; set;}
 
-    public string GetTitle()
-    {
-        if (title is not null)
-        {
-            return title;
-        }
-        return "null";
-    }
-
-    public string IsPrintable()
-    {
-        if (fileExtension == ".pdf" || fileExtension == ".epub")
-        {
-            return "yes";
-        }
-        else
-        {
-            return "no";
-        }
-    }
+    public string? URL{get; set;}
 }

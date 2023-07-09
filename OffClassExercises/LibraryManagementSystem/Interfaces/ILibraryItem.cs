@@ -1,8 +1,15 @@
-namespace Day4ParentInterfaces;
+namespace LibraryInterfaces;
 
-public interface ILibraryItem
+public interface IPrinted
 {
-    public string GetTitle();
-    public string? GetAuthor();
-    public string GetPublicationYear();
+    public string Title();
+    public string Author();
+    public int PublicationYear();
+    public int NumberOfPage();
+}
+
+public interface IDigital
+{
+    public string Filesize();
+    public string URL();
 }
