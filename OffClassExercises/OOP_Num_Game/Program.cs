@@ -22,7 +22,7 @@ public class Program
             int guessCount = gameData.guessCount;
             int randomNumber = gameLogic.RandomNumberGenerator(gameData.MinimumNumber, gameData.MaximumNumber);
 
-            while (!gameLogic.IsGuessCorrect(guess))
+            while (!gameLogic.IsGuessCorrect(in guess))
             {
                 userInterface.DisplayName(gameData.MinimumNumber, gameData.MaximumNumber);
                 guess = userInterface.GetGuess();
@@ -38,16 +38,21 @@ public class Program
                 }
                 guessCount ++;
             }
-            userInterface.DisplayFinish(randomNumber,guessCount);
-            string? response = userInterface.ExitPrompt();
+            userInterface.DisplayFinish(in randomNumber, in guessCount);
+            string response = userInterface.ExitPrompt();
 
-            if (response == "Y")
+            int continueGame = (int)gameLogic.ContinueGame(response);
+            if (continueGame == 0)
             {
                 restart = true;
             }
-            else
+            else if (continueGame == 1)
             {
                 restart = false;
+            }
+            else
+            {
+                throw new Exception("I don't understand anything besides Y or N!");
             }
         }
     }

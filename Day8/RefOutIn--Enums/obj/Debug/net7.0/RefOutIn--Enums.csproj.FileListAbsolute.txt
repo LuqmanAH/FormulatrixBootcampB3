@@ -1,0 +1,15 @@
+c:\Users\Batch 3\Solution Folder\Day8\RefOutIn--Enums\bin\Debug\net7.0\RefOutIn--Enums.exe
+c:\Users\Batch 3\Solution Folder\Day8\RefOutIn--Enums\bin\Debug\net7.0\RefOutIn--Enums.deps.json
+c:\Users\Batch 3\Solution Folder\Day8\RefOutIn--Enums\bin\Debug\net7.0\RefOutIn--Enums.runtimeconfig.json
+c:\Users\Batch 3\Solution Folder\Day8\RefOutIn--Enums\bin\Debug\net7.0\RefOutIn--Enums.dll
+c:\Users\Batch 3\Solution Folder\Day8\RefOutIn--Enums\bin\Debug\net7.0\RefOutIn--Enums.pdb
+c:\Users\Batch 3\Solution Folder\Day8\RefOutIn--Enums\obj\Debug\net7.0\RefOutIn--Enums.csproj.AssemblyReference.cache
+c:\Users\Batch 3\Solution Folder\Day8\RefOutIn--Enums\obj\Debug\net7.0\RefOutIn--Enums.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Batch 3\Solution Folder\Day8\RefOutIn--Enums\obj\Debug\net7.0\RefOutIn--Enums.AssemblyInfoInputs.cache
+c:\Users\Batch 3\Solution Folder\Day8\RefOutIn--Enums\obj\Debug\net7.0\RefOutIn--Enums.AssemblyInfo.cs
+c:\Users\Batch 3\Solution Folder\Day8\RefOutIn--Enums\obj\Debug\net7.0\RefOutIn--Enums.csproj.CoreCompileInputs.cache
+c:\Users\Batch 3\Solution Folder\Day8\RefOutIn--Enums\obj\Debug\net7.0\RefOutIn--Enums.dll
+c:\Users\Batch 3\Solution Folder\Day8\RefOutIn--Enums\obj\Debug\net7.0\refint\RefOutIn--Enums.dll
+c:\Users\Batch 3\Solution Folder\Day8\RefOutIn--Enums\obj\Debug\net7.0\RefOutIn--Enums.pdb
+c:\Users\Batch 3\Solution Folder\Day8\RefOutIn--Enums\obj\Debug\net7.0\RefOutIn--Enums.genruntimeconfig.cache
+c:\Users\Batch 3\Solution Folder\Day8\RefOutIn--Enums\obj\Debug\net7.0\ref\RefOutIn--Enums.dll

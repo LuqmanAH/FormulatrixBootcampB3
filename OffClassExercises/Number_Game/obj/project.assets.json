@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\Batch 3\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\Number_Game\\Number_Game.csproj",
+      "projectUniqueName": "c:\\Users\\Batch 3\\Solution Folder\\OffClassExercises\\Number_Game\\Number_Game.csproj",
       "projectName": "Number_Game",
-      "projectPath": "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\Number_Game\\Number_Game.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\user\\Programming\\C_Sharp\\FormulatrixBootcampB3\\OffClassExercises\\Number_Game\\obj\\",
+      "projectPath": "c:\\Users\\Batch 3\\Solution Folder\\OffClassExercises\\Number_Game\\Number_Game.csproj",
+      "packagesPath": "C:\\Users\\Batch 3\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Batch 3\\Solution Folder\\OffClassExercises\\Number_Game\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Batch 3\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

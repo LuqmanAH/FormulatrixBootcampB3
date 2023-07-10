@@ -21,5 +21,4 @@ public class GameData
         this.MinimumNumber = MinimumNumber;
         this.MaximumNumber = MaximumNumber;
     }
-
 }

@@ -14,7 +14,7 @@ public class UserInterface
         return guess;
     }
 
-    public void DisplayFinish(int randomNumber, int guessCount)
+    public void DisplayFinish(in int randomNumber, in int guessCount)
     {
         Console.WriteLine($"Actual number: {randomNumber}");
         Console.WriteLine($"You have successfully guessed the number in {guessCount} attempt(s)");

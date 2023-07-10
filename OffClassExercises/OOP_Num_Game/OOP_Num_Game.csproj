@@ -9,5 +9,7 @@
   <ItemGroup>
     <Content Include="Program.cs" />
     <Content Include="GameData.cs" />
+    <Content Include="UserCLI.cs" />
+    <Content Include="GameLogic.cs" />
   </ItemGroup>
 </Project>
