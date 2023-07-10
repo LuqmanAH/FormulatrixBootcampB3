@@ -9,4 +9,9 @@ Daily C# work report of Muhammad Luqman Al Helmy on Formulatrix Bootcamp Batch 3
 | OffClassExercises | Collection of cs projects written outside bootcamp class |
 
 ## Solution File
-As of 4th of July 2023, every project within the repository is child of `Solution/Folder.sln` solution file.
+As of 8th of July 2023, each class day will contain their own solution files
+
+As for the OffClass excercises, new project shall be added under the same solution file `OffClassExercises.sln`
+
+## Project Readme Files
+**TODO**: Write readme files for each daily projects and key takeaway concept of every class day
