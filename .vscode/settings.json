@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "dotnet.defaultSolution": "Day9/Day9.sln"
+=======
+    "dotnet.defaultSolution": "Day1/Day1.sln"
+>>>>>>> 9b5215a8d2570c0877d208206db63b57f0aa4335
 }

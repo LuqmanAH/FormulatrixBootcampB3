@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefOutIn--Enums", "RefOutIn--Enums\RefOutIn--Enums.csproj", "{AC5B6D74-9E7D-4443-A173-1395433E0187}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefOutIn--Enums", "RefOutInEnums\RefOutIn--Enums.csproj", "{EF11A498-1EDE-4AA3-BFD7-7CB1C74CAE4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,9 @@ Global
 		{AC5B6D74-9E7D-4443-A173-1395433E0187}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC5B6D74-9E7D-4443-A173-1395433E0187}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC5B6D74-9E7D-4443-A173-1395433E0187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF11A498-1EDE-4AA3-BFD7-7CB1C74CAE4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF11A498-1EDE-4AA3-BFD7-7CB1C74CAE4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF11A498-1EDE-4AA3-BFD7-7CB1C74CAE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF11A498-1EDE-4AA3-BFD7-7CB1C74CAE4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
