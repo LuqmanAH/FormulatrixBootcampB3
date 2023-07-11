@@ -1,4 +1,24 @@
-﻿public delegate string SampleDelegate(in string word);
+﻿public class GameArgs : EventArgs
+{
+    public string GameMode {get; set;}
+    public string ProcessedString {get; set;}
+    public GameArgs(string gameMode, string processedString)
+    {
+        GameMode = gameMode;
+        ProcessedString = processedString;
+    }
+}
+
+public class Handler
+{
+    // public string name = "Game Handler";
+    public event EventHandler<GameArgs> GameHandler;
+    public void GameStart(string gameMode)
+    {
+        GameHandler?.Invoke(this,gameMode);
+    }
+}
+
 public class Program
 {
     public static void Main()
@@ -8,7 +28,7 @@ public class Program
         while(restart)
         {
             StringModifier modifier = new();
-            SampleDelegate sampleDelegate;
+            Handler sampleEvent = new();
             string choice;
             string word;
             string response;
@@ -18,12 +38,12 @@ public class Program
 
             if(choice == "omitvowel")
             {
-                sampleDelegate = modifier.OmitVowel;
+                sampleEvent.GameHandler += modifier.OmitVowel;
                 
             }
             else if(choice == "reverseword")
             {
-                sampleDelegate = modifier.ReverseWord;
+                sampleEvent = modifier.ReverseWord;
             }
             else
             {
@@ -34,7 +54,7 @@ public class Program
             Console.WriteLine($"Program {choice}. Masukkan kata dengan huruf vokal: ");
             word = Convert.ToString(Console.ReadLine());
 
-            var hasil = sampleDelegate(in word);
+            var hasil = sampleEvent(in word);
             Console.WriteLine($"Hasil konversi:{hasil}");
 
             Console.WriteLine("konversi lagi? Y/N");
@@ -49,15 +69,9 @@ public class Program
                 restart = false;
             }
         }
-        var userFeedback = FeedBackForm();
-        Console.WriteLine($"Sampaian feedback Anda: {(Feedback)userfeedback}. Terima kasih. termintating..");
-    }
-
-    private static string FeedBackForm()
-    {
-        Console.WriteLine("Feedback anda dari skala 1 sampai 5: ")
-        string feedback = Convert.ToInt32(Console.ReadLine());
-        return feedback;
+        Console.WriteLine("Feedback anda dari skala 1 sampai 5: ");
+        var feedback = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine($"Sampaian feedback Anda: {(Feedback)feedback}. Terima kasih. termintating..");
     }
 }
 public enum Feedback
@@ -71,7 +85,7 @@ public enum Feedback
 
 public class StringModifier
 {
-    public string OmitVowel(in string word)
+    public string OmitVowel(object sender, string word)
     {
         var vowels = "aiueoAIUEO";
         var processedWord = "";
