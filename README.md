@@ -5,7 +5,8 @@ Daily C# work report of Muhammad Luqman Al Helmy on Formulatrix Bootcamp Batch 3
 
 | Folder Name| Description |
 | ------------ | ------------- |
-| Day X | Folder containing .csproj file(s) written on the corresponding day |
+| Day X | Folder containing .sln file for handling projects on the corresponding day |
+| Day X\ProgramFolder | Folder containing .csproj and .cs file(s) written on the corresponding day |
 | OffClassExercises | Collection of cs projects written outside bootcamp class |
 
 ## Solution File
