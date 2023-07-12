@@ -38,24 +38,24 @@ public class InvalidProcessType : IProcess
     }
 }
 
+// TODO introduce processtype enum so user can input indexes rather than the process name
 public class ProcessFactory
 {
-    public static IProcess? CreateProcess(string processtype)
+    public static IProcess? CreateProcess(int processtype)
     {
         try
         {
-            if (processtype == "omitvowel")
+            ProcessName processName = (ProcessName) processtype;
+            if (processName.ToString() == "omitvowel")
             {
                 return new OmitVowel();
             }
-            else if (processtype == "reverseword")
+            else if (processtype.ToString() == "reverseword")
             {
                 return new ReverseWord();
             }
-            else
-            {
-                return new InvalidProcessType();
-            }
+            Console.WriteLine("CreateProcess");
+            return null;
         }
         catch(Exception ex)
         {
@@ -63,4 +63,10 @@ public class ProcessFactory
             return null;
         }
     }
+}
+
+enum ProcessName
+{
+    omitvowel = 1,
+    reverseword
 }
