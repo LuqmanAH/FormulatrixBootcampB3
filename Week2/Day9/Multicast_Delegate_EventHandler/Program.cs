@@ -12,23 +12,18 @@ public class Program
   
         while(restart)
         {
-            int? choice;
             string? word;
             string? response;
 
+            label1:
             Console.WriteLine("Pilih Operasi yang hendak dilakukan: (1-2)");
-            
-            try
+            bool isParsed = int.TryParse(Console.ReadLine(), out int choice);
+            if (!isParsed)
             {
-                Convert.ToInt32(Console.ReadLine());
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Must Input integer value!");
-                break;
+                Console.WriteLine("Please enter a valid integer!");
+                goto label1;
             }
 
-            choice = Convert.ToInt32(Console.ReadLine());
             IProcess? chosenProcess = ProcessFactory.CreateProcess(choice);
 
             if(chosenProcess is not null)

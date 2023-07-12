@@ -47,7 +47,7 @@ public class ProcessFactory
         {
             return new OmitVowel();
         }
-        else if (processtype.ToString() == "reverseword")
+        else if (processName.ToString() == "reverseword")
         {
             return new ReverseWord();
         }
