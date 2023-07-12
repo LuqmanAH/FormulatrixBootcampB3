@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multicast_Delegate_EventHandler", "Multicast_Delegate_EventHandler\Multicast_Delegate_EventHandler.csproj", "{0DB05433-BAE3-4456-AF74-3FD648F411E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate-Events-Practice", "Delegate-Events-Practice\Delegate-Events-Practice.csproj", "{248381D9-99B6-4B4D-91FF-2FD61759B055}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{0DB05433-BAE3-4456-AF74-3FD648F411E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DB05433-BAE3-4456-AF74-3FD648F411E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DB05433-BAE3-4456-AF74-3FD648F411E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{248381D9-99B6-4B4D-91FF-2FD61759B055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{248381D9-99B6-4B4D-91FF-2FD61759B055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{248381D9-99B6-4B4D-91FF-2FD61759B055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{248381D9-99B6-4B4D-91FF-2FD61759B055}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
