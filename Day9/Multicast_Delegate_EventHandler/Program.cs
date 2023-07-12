@@ -9,31 +9,43 @@ public class Program
         RestartHandler restartHandler = new();
         restartHandler.SetRestart(true);
         bool restart =  restartHandler.restart;
-        var availableProcess = Enum.GetValues(typeof(ProcessName)).Cast<ProcessName>().Max();
+  
         while(restart)
         {
-            int choice;
-            string word;
-            string response;
+            int? choice;
+            string? word;
+            string? response;
 
             Console.WriteLine("Pilih Operasi yang hendak dilakukan: (1-2)");
+            
+            try
+            {
+                Convert.ToInt32(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Must Input integer value!");
+                break;
+            }
+
             choice = Convert.ToInt32(Console.ReadLine());
+            IProcess? chosenProcess = ProcessFactory.CreateProcess(choice);
 
-            IProcess process = ProcessFactory.CreateProcess(choice);
-            ProcessDelegate processDelegate = process.Process;
-            // try
-            // {
-            // }
-            // catch (NullReferenceException ex)
-            // {
-            //     Console.WriteLine("No such ");
-            // }
+            if(chosenProcess is not null)
+            {
+                ProcessDelegate processDelegate = chosenProcess.Process;
 
-            Console.WriteLine($"Program {(ProcessName) choice}. Masukkan kata dengan huruf vokal: ");
-            word = Convert.ToString(Console.ReadLine());
+                Console.WriteLine($"Program {(ProcessName) choice}. Masukkan kata dengan huruf vokal: ");
+                word = Convert.ToString(Console.ReadLine());
 
-            string processedWord = processDelegate(word);
-            Console.WriteLine($"Hasil konversi:{processedWord}");
+                string? processedWord = processDelegate(word);
+                Console.WriteLine($"Hasil konversi:{processedWord}");
+            }
+            else
+            {
+                Console.WriteLine("ERROR:PROCESS UNAVAILABLE");
+                break;
+            }
 
             Console.WriteLine(restartHandler.message);
             response = Convert.ToString(Console.ReadLine());
