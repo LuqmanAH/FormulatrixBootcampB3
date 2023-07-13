@@ -4,36 +4,36 @@ using System.Threading;
 //* Example taken from dotnettutorials.net
 namespace DelegatesDemo
 {
-    //Step1: Define one delegate
-    //Custom Delegate
-    //public delegate void WorkPerformedHandler(object sender, WorkPerformedEventArgs e);
+    //!Step1: Define one delegate
+    //*Custom Delegate
+    //*public delegate void WorkPerformedHandler(object sender, WorkPerformedEventArgs e);
 
     public class Worker
     {
-        //Step2: Define one event to notify the work progress using the custom delegate
+        //!Step2: Define one event to notify the work progress using the custom delegate
         public event EventHandler<WorkPerformedEventArgs> WorkPerformed;
 
-        //Step2: Define another event to notify when the work is completed using buil-in EventHandler delegate
+        //!Step2: Define another event to notify when the work is completed using buil-in EventHandler delegate
         public event EventHandler WorkCompleted;
 
         public void DoWork(int hours, WorkType workType)
         {
-            //Do Work here and notify the consumer that work has been performed
+            //*Do Work here and notify the consumer that work has been performed
             for (int i = 0; i < hours; i++)
             {
                 OnWorkPerformed(i+1, workType);
                 Thread.Sleep(3000);
             }
 
-            //Notify the consumer that work has been completed
+            //*Notify the consumer that work has been completed
             OnWorkCompleted();
         }
 
         protected virtual void OnWorkPerformed(int hours, WorkType workType)
         {
-            //Raising Events only if Listeners are attached
+            //*Raising Events only if Listeners are attached
 
-            //Approach1
+            //?Approach1
 
             if (WorkPerformed != null)
             {
@@ -45,7 +45,7 @@ namespace DelegatesDemo
                 WorkPerformed(this, e);
             }
 
-            //Approach2
+            //?Approach2
             //EventHandler<WorkPerformedEventArgs> del1 = WorkPerformed as EventHandler<WorkPerformedEventArgs;
             //if (del1 != null)
             //{
@@ -71,20 +71,20 @@ namespace DelegatesDemo
 
         protected virtual void OnWorkCompleted()
         {
-            //Raising the Event
-            //Approach1
+            //*Raising the Event
+            //?Approach1
             //EventHandler delegate takes two parameters i.e. object sender, EventArgs e
             //Sender is the current class i.e. this keyword and we do not need to pass any data
             //So, we need to pass Empty EventArgs
             //WorkCompleted?.Invoke(this, EventArgs.Empty);
 
-            //Approach2
+            //?Approach2
             if (WorkCompleted is EventHandler del)
             {
                 del(this, EventArgs.Empty);
             }
 
-            //Note: You can also use other two Approaches
+            //*Note: You can also use other two Approaches
         }
     }
 
