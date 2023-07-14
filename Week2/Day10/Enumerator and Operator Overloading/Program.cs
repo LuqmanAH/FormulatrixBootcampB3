@@ -29,19 +29,15 @@ public class Program
         Console.WriteLine("-----------------");
 
         //ambil komponen imaginary
-        int complex3Imag = Complex.AddPart(complex1, complex2);
+        int complex3Real = Complex.AddPart(complex1, complex2, 2);
 
         //ambil komponen real
-        int complex3Real = Complex.AddPart(complex1, complex2, "real");
+        int complex3Imag = Complex.AddPart(complex1, complex2);
 
-        Console.WriteLine(complex3Real);
         Console.WriteLine(complex3Imag);
+        Console.WriteLine(complex3Real);
         Console.WriteLine("-----------------");
 
         Console.ReadLine();
     }
-    // public class SquareMatrix
-    // {
-
-    // }
 }

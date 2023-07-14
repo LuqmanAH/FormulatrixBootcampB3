@@ -18,14 +18,15 @@ public class Complex
             };
             return temp;
         }
-        public static int AddPart (Complex x, Complex y, string part = "imag") // Addition by part, return sesuai yang diminta
+        public static int AddPart (Complex x, Complex y, int part = 1) // Addition by part, return sesuai yang diminta. default return real part. pass int 2 as 3rd parameter to invoke the imaginary part
         {
            Complex temp = new()
             {
                 _real = x._real + y._real,
                 _imag = x._imag + y._imag
             };
-            if(part == "imag")
+            var chosenPart = (ComplexPart)part;
+            if(chosenPart == ComplexPart.imag)
             {
                 return temp._imag;
             }
@@ -50,4 +51,10 @@ public class Complex
                 Console.WriteLine($"{_real} + i{_imag}");
             }
         }
+    }
+
+    public enum ComplexPart
+    {
+        real = 1,
+        imag
     }
