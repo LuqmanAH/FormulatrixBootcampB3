@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagementSystem", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "number rebase", " number rebase\number rebase.csproj", "{C3563382-956F-4800-874A-160B97E5C721}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiffOfSquareSum", "DiffOfSquareSum\DiffOfSquareSum.csproj", "{64E6D781-40DE-4B3A-81FA-5CE831FEDA5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{C3563382-956F-4800-874A-160B97E5C721}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3563382-956F-4800-874A-160B97E5C721}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3563382-956F-4800-874A-160B97E5C721}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64E6D781-40DE-4B3A-81FA-5CE831FEDA5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E6D781-40DE-4B3A-81FA-5CE831FEDA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E6D781-40DE-4B3A-81FA-5CE831FEDA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64E6D781-40DE-4B3A-81FA-5CE831FEDA5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
