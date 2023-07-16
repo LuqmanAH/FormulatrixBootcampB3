@@ -1,19 +1,12 @@
-﻿using System;
-using System.Xml.XPath;
-
-namespace NumberRebase;
+﻿namespace NumberRebase;
 
 class Program
 {
     static void Main(string[] args)
     {
         NumberRebase rebaser = new();
-        // double result = rebaser.AnyToBase10(3, 12);
-        // Console.WriteLine(result);
-		// double backAgain = rebaser.DecToAny(5, result);
-		// Console.WriteLine(backAgain);
-		double daBoi = rebaser.Rebase(3, 5, 12);
-		Console.WriteLine(daBoi);
+		double toBase5 = rebaser.Rebase(3, 5, 12);
+		Console.WriteLine(toBase5);
     }
 }
 
@@ -21,11 +14,11 @@ class NumberRebase
 {
     public double Rebase(double initBase, double toBase, int inputNum)
 	{
-		double decEquivalent = AnyToBase10(initBase, inputNum);
+		double decEquivalent = AnyToDec(initBase, inputNum);
 		double result = DecToAny(toBase, decEquivalent);
 		return result;
 	}
-    private static double AnyToBase10(double initBase, int inputNum)
+    private static double AnyToDec(double initBase, int inputNum)
     {
         double y = 0d;
 		List<int> digits = new List<int>();
