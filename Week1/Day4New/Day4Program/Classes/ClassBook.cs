@@ -8,7 +8,8 @@ public class NonFictionBook : IBook
     public string? author;
     public string title;
     private static int _idCounter = 1;
-    public static int BookID {
+    public static int BookID 
+    {
         get{return _idCounter;}
     }
 
