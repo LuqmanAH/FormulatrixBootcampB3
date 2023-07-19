@@ -1,6 +1,6 @@
 ﻿namespace BankWakanda;
 
-public interface ICloseAccount
+public interface IAccountCloseable
 {
     void CloseAccount();
 }
@@ -30,7 +30,7 @@ public abstract class BankAccount
     public abstract double Withdraw(double amount);
 }
 
-public class CheckingAccount : BankAccount, ICloseAccount
+public class CheckingAccount : BankAccount, IAccountCloseable
 {
     public int overdraftLimit;
     
