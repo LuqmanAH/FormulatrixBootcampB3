@@ -161,3 +161,12 @@ Observe `SavingsAccount` another child class inherited from `BankAccount` above.
 **Concrete Class**
 - You want to have a single well-defined implementation of a class
 - You want the child classes that inherit this class to only extend the behaviour of this class.
+
+**Virtual Method**
+- You want a method in the base class that can be overriden by its child
+- You want the base class to have a default implementation of a method, but you let the children to have their own logic in implementing this method
+- You don't want to enforce the implementation of this method in its children
+
+**Abstract Method**
+- You want to enforce the implementation of this method in every class that inherits this class
+- You are okay with the base class for not implementing this method, but troubled to death if the child class not implementing this method
