@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 namespace myDay1Program;
-class program
+class Program
 {
     static int MyInteger = 128;
     static float MyDecimal = 23.56F;

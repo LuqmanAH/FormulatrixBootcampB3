@@ -2,8 +2,8 @@ namespace Planetarium;
 
 public class Planet
 {
-    public string PlanetName{get; private set;}
     private string _planetType;
+    public string PlanetName{get; private set;}
     public int PlanetDensity{private get; set;}
     public int PlanetTemperature{private get; set;}
 
