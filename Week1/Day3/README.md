@@ -108,7 +108,7 @@ The `CheckingAccount` class is a child class derived from `BankAccount` and comp
 `CheckingAccount` could also be extended by defining methods exclusive to its class' instances. But this is not provided by the example as the main purpose of the example is to emphasize Polymorphism Inheritance by introducing two different classes inheriting the parent `BankAccount` and imply the `IAccountCloseable` interface.
 
 ```csharp
-public class SavingsAccount : BankAccount
+public class SavingsAccount : BankAccount, IAccountCloseable
 {
     public double interestRate;
     public int savingDuration;

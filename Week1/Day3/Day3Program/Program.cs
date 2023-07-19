@@ -59,7 +59,7 @@ public class CheckingAccount : BankAccount, IAccountCloseable
     }
 }
 
-public class SavingsAccount : BankAccount
+public class SavingsAccount : BankAccount, IAccountCloseable
 {
     public double interestRate;
     public int savingDuration;
