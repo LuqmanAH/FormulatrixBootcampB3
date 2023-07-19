@@ -148,7 +148,13 @@ Observe `SavingsAccount` another child class inherited from `BankAccount` above.
 
 `SavingsAccount` have defined another method `CalculateInterest` to extend its functionallity. This is allowable as long as the binded contracts have already fulfilled by the class definition.
 
-### When To Use What
+### Example Class Diagram
+
+The day 3 program class structure can be represented by this following class diagram.
+
+![class diagram from day3 program](/Week1/Day3/Images/Class_Diagram.png)
+
+## When To Use What
 **Abstract Class**
 - when you want to have a base implementation of a class
 - when you want to derive this class to other specific implementation (polymorph)
