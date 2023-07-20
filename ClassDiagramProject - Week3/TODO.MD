@@ -1,0 +1,4 @@
+- Revisit Move Class Logic
+- Revisit the relation between Move, Coordinate, Piece, and Player
+- Make The Goddamn Logic itself before proceeding
+- Check the methods for each class
