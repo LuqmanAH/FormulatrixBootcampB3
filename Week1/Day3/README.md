@@ -3,10 +3,10 @@
 
 Basic OOP: Inheritance by Interface, Abstract Class, concrete class; Polymorphism by overriding and overloading virtual and abstract method.
 
-
 ## Lessons Learned
 
 ### The Pillars: Inheritance and Polymorphism
+
 When defining multiple classes in C#, one might found a class that has similar attributes, properties, and even methods.
 
 To avoid redundancy and improve the reusability of the code, implementing inheritance and Polymorphism pillar is a must.
@@ -48,7 +48,9 @@ public abstract class BankAccount
     public abstract double Withdraw(double amount);
 }
 ```
+
 The code defines the abstract class `BankAccount`. In this example, the defined class has multiple properties:
+
 - AccountName
 - AccountNumber
 - accountBalance
@@ -144,6 +146,7 @@ public class SavingsAccount : BankAccount, IAccountCloseable
     }
 }
 ```
+
 Observe `SavingsAccount` another child class inherited from `BankAccount` above. The behaviour of the overriden methods are different from each child class, thus we have implemented the polymorphism pillar in this namespace.
 
 `SavingsAccount` have defined another method `CalculateInterest` to extend its functionallity. This is allowable as long as the binded contracts have already fulfilled by the class definition.
@@ -155,24 +158,30 @@ The day 3 program class structure can be represented by this following class dia
 ![class diagram from day3 program](/Week1/Day3/Images/Class_Diagram.png)
 
 ## When To Use What
+
 **Abstract Class**
+
 - when you want to have a base implementation of a class
 - when you want to derive this class to other specific implementation (polymorph)
 - when you want the derived implementation of this class to have a default methods
 
 **Interface**
+
 - You want to determine a common set of enforced methods that multiple unrelated class can implement
 - You want methods to be inherited by multiple classes, as C# doesn't support multiple inheritance by class
 
 **Concrete Class**
+
 - You want to have a single well-defined implementation of a class
 - You want the child classes that inherit this class to only extend the behaviour of this class.
 
 **Virtual Method**
+
 - You want a method in the base class that can be overriden by its child
 - You want the base class to have a default implementation of a method, but you let the children to have their own logic in implementing this method
 - You don't want to enforce the implementation of this method in its children
 
 **Abstract Method**
+
 - You want to enforce the implementation of this method in every class that inherits this class
 - You are okay with the base class for not implementing this method, but troubled to death if the child class not implementing this method
