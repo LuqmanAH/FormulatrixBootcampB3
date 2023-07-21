@@ -32,7 +32,8 @@ The game is divided into several objects as the building blocks.
 - Game Runner
 
   - starts game and terminates game based on player
-  - Pertains the board object
+  - Mandatory to have a Game Board
   - Continuously evaluate the pieces position to evaluate the game status
   - Evaluates whether the finished game has a winner or stalemate
+  - Uses the GameStatus enum to define current game state base
   
