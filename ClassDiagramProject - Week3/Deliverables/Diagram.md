@@ -1,6 +1,6 @@
 ```mermaid
 classDiagram
-%% Pieces Extension
+%%  Extension
 Piece <|-- King : Extends
 Piece <|-- Queen : Extends
 Piece <|-- Bishop : Extends
@@ -12,66 +12,91 @@ Piece <|-- Pawn : Extends
 HumanPlayer ..|> IPlayer : Implements
 
 %% Baseline default object
-Cell <-- Piece
-Cell o-- Position
-Board o-- Cell
-
+ChessBoard ..|> IBoard : implements
+Piece <-- Position
+ChessGame o-- Piece
 
 %% Movement Engine
-Move <-- Cell
-Move <-- Piece
-%% Board o-- Piece
-IPlayer --> Move
+ChessMove ..|> IMove : implements
+ChessMove <-- ChessMoveSet
+ChessGame o-- ChessMove
+Piece --> ChessMove
 
 %% Game Env Generation
 ChessGame o-- IPlayer
-ChessGame *-- Board
+ChessGame *-- ChessBoard
 ChessGame ..|> GameStatus : Uses
+ChessGame ..|> PlayerColor : Uses
+ChessGame ..|> PromoteTo : Uses
 
 class ChessGame{
-    +board  Board
-    +players  IPlayer[2]
-    +whiteTurn  Boolean
+    +board  ChessBoard
+    -playerList Dictionary ~PlayerColor.IPlayer~
+    -piecesList Dictionary ~List~Piece~.IPlayer~
+    -validMoves Dictionary ~ChessMove.Board~
+    -currentTurn IPlayer
     +gameStatus GameStatus
     +StartGame() void
     +FinishGame() void
     +CheckGameStatus() GameStatus
+    +SetGameStatus() void
+    +IsValidMove() bool
+    +PlayerWillBeInCheck() bool
+    +PawnPromotion() PromoteTo
+    +MakeMove(Piece, Position, validMoves) ChessMove
 
 }
-
-class Board{
+class PlayerColor{
+    <<Enumeration>>
+    +WHITE
+    +BLACK
+}
+class ChessBoard{
     
-    +size Cell[8][8]
+    +size int32
     +InitializeBoard() void
-    +GetPiecePosition(Position position) Piece?
+    +GetBoardSize() int32
 
 }
-class Cell{
-    
-    +coordinate Position
-    +piece Piece
+class IBoard{
+    <<Interface>>
+    +GetBoardSize() int32
 }
 class IPlayer{
     <<Interface>>
-    +MakeMove(bool whiteTurn) Move
+    +GetName() string
+    +GetUID() int32
 }
 class HumanPlayer{
     
-    +white Boolean
+    +playername string
     +playerID int32
-    +MakeMove(bool whiteTurn) Move
-    +IsWhite() Boolean
+    +GetName() string
+    +GetUID() int32
 }
-class Move{
+class ChessMove{
     
-    +player IPlayer
-    +origin  Cell
-    +destination  Cell
-    +pieceMoved  Piece
-    +pieceKilled  Piece
-    +castlingMove  Boolean
-    +Move(Piece) Boolean
-    +IsCastling() Boolean
+    +MovementLibrary Dictionary ~Piece.ChessMoveSet~
+    +IsCastling() bool
+    +IsEnPassant() bool
+    +IsPromotion() bool
+
+}
+class IMove{
+    <<Interface>>
+    +GetOrigin() Position
+    +GetDestination() Position
+    +SetDestination(Position destintation) void
+}
+class ChessMoveSet{
+    +SinglePawnMove()
+    +DoublePawnMove()
+    +EnPassant()
+    +BishopDiagonalSlide()
+    +RookOrthogonalSlide()
+    +KnightL()
+    +QueenMove()
+    +KingMove()
 }
 class Position{
     
@@ -85,46 +110,45 @@ class GameStatus{
     WHITE_WIN
     STALEMATE
 }
+class PromoteTo{
+    <<Enumeration>>
+    QUEEN
+    ROOK
+    BISHOP
+    KNIGHT
+}
 class Piece{
     <<Abstract>>
-    +white  Boolean
-    +killed  Boolean
-    +isKilled() Boolean
-    +IsWhite() Boolean
-    +CanMove(Board board, Move move) Boolean
-
+    +captured  bool
+    +position Position
 }
 class King{
     
-    -castlingDone Boolean
-    +CastlingDone() Boolean
-    +CastlingMove(Position origin, Position destination) Boolean
-    +CanMove(Board board, Move move) Boolean
-    +IsInCheck(Board board) Boolean
+    +castlingDone bool
+    +IsInCheck bool
 }
 class Queen{
     
-    +CanMove(Board board, Move move) Boolean
 }
 class Knight{
     
-    +CanMove(Board board, Move move) Boolean
 
 }
 class Bishop{
     
-    +CanMove(Board board, Move move) Boolean
     
 }
 class Rook{
     
-    +CanMove(Board board, Move move) Boolean
 
 }
 class Pawn{
     
-    -promotionStatus Boolean
-    +isPromoted() Boolean
-    +CanMove(Board board, Move mov, Boolean promotionStatus) Boolean
+    +promotionStatus bool
+    +moveCount int32
+    +EnPassantStatus bool
+    +GetPromotionStatus() bool
+    +GetEnPassantStatus() bool
+    +GetMoveCount() int32
 }
 ```

@@ -6,17 +6,17 @@ Chess class diagram To do list
 
 - Decouple HumanPlayer Class by:
   
-  - Remove MakeMove() method in order to generalize the HumanPlayer class. Also remove from the Interface
-  - Remove IsWhite() method in order to make the HumanPlayer class reusable in games without colors
+  - ~~Remove MakeMove() method in order to generalize the HumanPlayer class. Also remove from the Interface~~
+  - ~~Remove IsWhite() method in order to make the HumanPlayer class reusable in games without colors~~
 
 ## Revamp the GR mechanism to track pieces, and determine player side
 
-- Introduce Color Enum to be implemented by the ChessGame runner
-- Introduce a Dictionary field to store player color settings in GR
-- Field to determine which turn currently the game is better assigned to refer the instance of the IPlayer itself rather than boolean value
-- Every player should have a list of pieces in possesion to track
-- This tracker should be implemented as field in GR as a dictionary in which a list of pieces corresponds to a player available in the game
-- This removes the requirement to have IsWhite() method for each piece
+- ~~Introduce Color Enum to be implemented by the ChessGame runner~~
+- ~~Introduce a Dictionary field to store player color settings in GR~~
+- ~~Field to determine which turn currently the game is better assigned to refer the instance of the IPlayer itself rather than boolean value~~
+- ~~Every player should have a list of pieces in possesion to track~~
+- ~~This tracker should be implemented as field in GR as a dictionary in which a list of pieces corresponds to a player available in the game~~
+- ~~This removes the requirement to have IsWhite() method for each piece~~
 
 ## Revamp board layouting mechanism
 
