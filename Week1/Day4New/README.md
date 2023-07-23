@@ -171,7 +171,7 @@ void Main()
     Dog safeDog = animal_2 as Dog; // safer downcasting using as syntax
 
     Animal animal_3 = new Animal();
-    Dog dog_3 = (Dog)animal_3;  // Fails as you can't cast a parent to a child
+    Dog dog_3 = (Dog)animal_3;  // Fails and considered as mismatched conversion type
 }
 
 class Animal
@@ -187,7 +187,7 @@ class Dog : Animal
 }
 ```
 
-##### Upcasting
+#### Upcasting
 
 - The conversion of a derived class object to its base class object
 - Considered implicit cast
@@ -195,8 +195,20 @@ class Dog : Animal
 - Any methods or fields that is extended from its base class and exclusive only to the derived class wouldn't be able to be accessed after upcasting
 - Overriden virtual methods from the base class could still be accessed, but would behave according to the definition stated in the derived class
 
-##### downcasting
+#### downcasting
 
 - The conversion of a base class object to its derived class counterpart
 - Requires explicit casting as the process may result information loss when there is a class mismatch.
-- Allows the downcasted object to access the 
+- Allows the downcasted object to access the overriden version of its virtual method and extension methods that is exclusive to the child class
+
+Explicit downcasting would still fail if we want to construct a derived class instance such as `Dog dog = (dog) animal` assuming that `animal` is an instance of a parent class. The failure would detected only after compilation by InvalidCast Exception. To prevent the exception from occuring, we can use the **`as`** syntax.
+
+```csharp
+
+Animal animal_2 = new Dog();
+Animal animal_3 = new Animal();
+
+Dog doggo_2 = animal_2 as Dog; // succesfull downcast
+Dog doggo_3 = animal_3 as Dog; // disallowed downcast results in null assignment
+
+```
