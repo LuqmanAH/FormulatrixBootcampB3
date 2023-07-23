@@ -13,18 +13,18 @@ HumanPlayer ..|> IPlayer : Implements
 
 %% Baseline default object
 ChessBoard ..|> IBoard : implements
-Piece <-- Position
-ChessGame o-- Piece
+Piece "1"<--"1" Position
+ChessGame "1"o--"2..32" Piece
 
 %% Movement Engine
 ChessMove ..|> IMove : implements
-ChessMove <-- ChessMoveSet
-ChessGame o-- ChessMove
-Piece --> ChessMove
+ChessMove "1"<--"6" ChessMoveSet
+ChessGame "1"o--"1" ChessMove
+Piece "1"-->"1" ChessMove
 
 %% Game Env Generation
-ChessGame o-- IPlayer
-ChessGame *-- ChessBoard
+ChessGame "1"o--"2" IPlayer
+ChessGame "1"*--"1" ChessBoard
 ChessGame ..|> GameStatus : Uses
 ChessGame ..|> PlayerColor : Uses
 ChessGame ..|> PromoteTo : Uses
@@ -46,33 +46,47 @@ class ChessGame{
     +MakeMove(Piece, Position, validMoves) ChessMove
 
 }
+class GameStatus{
+    <<Enumeration>>
+    ONGOING
+    BLACK_WIN
+    WHITE_WIN
+    STALEMATE
+}
+class PromoteTo{
+    <<Enumeration>>
+    QUEEN
+    ROOK
+    BISHOP
+    KNIGHT
+}
 class PlayerColor{
     <<Enumeration>>
-    +WHITE
-    +BLACK
+    WHITE
+    BLACK
 }
 class ChessBoard{
     
-    +size int32
+    +size int
     +InitializeBoard() void
-    +GetBoardSize() int32
+    +GetBoardSize() int
 
 }
 class IBoard{
     <<Interface>>
-    +GetBoardSize() int32
+    +GetBoardSize() int
 }
 class IPlayer{
     <<Interface>>
     +GetName() string
-    +GetUID() int32
+    +GetUID() int
 }
 class HumanPlayer{
     
     +playername string
-    +playerID int32
+    +playerID int
     +GetName() string
-    +GetUID() int32
+    +GetUID() int
 }
 class ChessMove{
     
@@ -100,22 +114,8 @@ class ChessMoveSet{
 }
 class Position{
     
-    +rank  int32
-    +files  int32
-}
-class GameStatus{
-    <<Enumeration>>
-    ONGOING
-    BLACK_WIN
-    WHITE_WIN
-    STALEMATE
-}
-class PromoteTo{
-    <<Enumeration>>
-    QUEEN
-    ROOK
-    BISHOP
-    KNIGHT
+    +rank  int
+    +files  int
 }
 class Piece{
     <<Abstract>>
@@ -145,10 +145,10 @@ class Rook{
 class Pawn{
     
     +promotionStatus bool
-    +moveCount int32
+    +moveCount int
     +EnPassantStatus bool
     +GetPromotionStatus() bool
     +GetEnPassantStatus() bool
-    +GetMoveCount() int32
+    +GetMoveCount() int
 }
 ```
