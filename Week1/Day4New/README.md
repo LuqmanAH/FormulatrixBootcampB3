@@ -3,7 +3,30 @@
 
 Object Type, Generic, Dynamic, Boxing and Unboxing, Type Castings
 
-## Lessons Learned
+## Lessons Learned  
+
+### Dynamic vs Var Type
+
+- Dynamic type objects bypass type-checking during compile time
+- Var type objects infer its type based on the assigned expression and fixed during compile time, unable to change during runtime
+- Dynamic type objects can re-determine its actual type based on the value it holds during runtime. Hence, the syntax `dynamic`.
+
+```csharp
+
+void Main()
+{
+    dynamic dynamicVar = 45;
+    dynamicVar = "forty five";
+    dynamicVar = new List<int> {4, 5, 45}; // all is allowable
+
+    var intVar = 10; // during compile time will fix its type to int
+    intVar = "ten"; // would result in error (except parsing numeric string)
+}
+
+```
+
+- Dynamic type removes typesafety feature from C# and should be handled with caution
+- Var type useful if the exact type of a variable is not yet known
 
 ### Object Type
 
