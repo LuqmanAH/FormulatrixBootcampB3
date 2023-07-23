@@ -39,6 +39,8 @@ public class MainProgram
 
 ```
 
+Please note the last line in the Main() above wouldn't result in compilation error, a runtime exception will occur instead.
+
 ### Reference Vs Value, Why should i care?
 
 - Key difference between a reference and a value type data in C# is how they are treated in the computer memory
@@ -107,4 +109,94 @@ Also, using generic provides more typesafety rather than the object arguments co
 ### Type Casting
 
 - The data conversion process from one data type to another is referred to as typecasting in C#.
-- TODO
+- Type casting can be done explicitly or implicitly if some requirements are satisfied.
+- Another form of casting can be done based on the inheritance relationship between classes. These concepts are referred to upcast and downcast
+
+#### Implicit Explicit type casting example
+
+```csharp
+public static void Main()
+{
+    int num = 150;
+    Type numType = num.GetType();
+
+    double numDouble = num;
+    Type numDoubleType = numDouble.GetType();
+
+    decimal numDec = 5678900;
+    int x = numDec; // would result in compile time error by data size issues
+    bool y = (bool)numDec; // would reuslt in compile time error by incompatibility
+
+    Console.WriteLine($"int num val: {num}"); // 150 valid print
+    Console.WriteLine($"int num type: {numType}"); // integer
+
+    Console.WriteLine($"int double val: {numDouble}"); //150 valid print
+    Console.WriteLine($"int num val: {num}"); // double
+
+    Console.WriteLine(sizeof(int)); // 4 bytes
+    Console.WriteLine(sizeof(double)); // 8 bytes
+    Console.WriteLine(sizeof(decimal)); // 16 bytes
+}
+```
+
+Generally, casting is allowed when different types are compatible to each other. Specifically for implicit casting, the original type should have smaller data size (denoted from the sizeof() function). Explicit casting can be thought of conversion enforcement to allow smaller size types converted to larger size types.
+
+```csharp
+public static void Main()
+{
+    decimal superLargeNumber = 89989898311432560M;
+
+    int forceToFitNumber = (int) superLargeNumber; // allowed explicit cast
+    Console.WriteLine(forceToFitNumber); // allowed but may result in broken data
+}
+```
+
+The explicit casting would result in following:
+
+- allowed casting from larger size data to smaller size data types
+- rounding precision errors if the data was to be further computed
+- broken data if the value is already defined and forced to fit just like the above example.
+- explicit cast would still fail the conversion if the data is incompatible with each other. As for int and string, another method known as parsing can be done.
+
+#### Up cast Down Cast
+
+```csharp
+void Main()
+{
+    Dog dog_1 = new();
+    Animal animal_1 = dog_1; // Form of upcasting, implicitly done
+
+    Animal animal_2 = new Dog();
+    Dog dog_2 = (Dog)animal_2; // Form of downcasting, explicitly done
+    Dog safeDog = animal_2 as Dog; // safer downcasting using as syntax
+
+    Animal animal_3 = new Animal();
+    Dog dog_3 = (Dog)animal_3;  // Fails as you can't cast a parent to a child
+}
+
+class Animal
+{
+
+    // some fields and methods
+
+}
+
+class Dog : Animal
+{
+    // some fields and methods
+}
+```
+
+##### Upcasting
+
+- The conversion of a derived class object to its base class object
+- Considered implicit cast
+- The derived object class shall be treated as the base class during the upcast
+- Any methods or fields that is extended from its base class and exclusive only to the derived class wouldn't be able to be accessed after upcasting
+- Overriden virtual methods from the base class could still be accessed, but would behave according to the definition stated in the derived class
+
+##### downcasting
+
+- The conversion of a base class object to its derived class counterpart
+- Requires explicit casting as the process may result information loss when there is a class mismatch.
+- Allows the downcasted object to access the 
