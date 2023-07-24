@@ -1,7 +1,7 @@
 
 # Day 5 Key Takeaways
 
-class as reference type, struct as value type, interface as a reference vs object as a reference, Immutability
+class as reference type, struct as value type, Immutability
 
 ## Lessons Learned
 
@@ -81,3 +81,45 @@ public struct Person
 if the similar `main()` program is executed but the Person object is now a struct type, the modification that occurs in the parent variable **would not** affect the child variable. This is because the assignment of child to equal with parent implicitly tells the compiler to copy the **actual object value** contained in the struct (name and age) rather than its memory pointer.
 
 So now both of the instances has decoupled values from each other that have independent memory address in the stack
+
+### Type Mutability
+
+A data type in C# is either mutable or immutable. Mutable types allow dynamic changes of values contained within the type.
+
+One instance of this type is allowed to be modified or reassigned to a new value in its lifetime without the need to create new instances.
+
+A custom class and many of collection object members are considered as mutable.
+
+```csharp
+public class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+
+Person person = new Person { Name = "John", Age = 30 };
+person.Name = "Jane"; // Mutable: Changing the name property
+person.Age = 31;      // Mutable: Changing the age property
+```
+
+Immutable types on the other hand, would need to create a new instance that contains the updated value of the previous instance. for example:
+
+```csharp
+int x = 10;
+x = 20; // This creates a new value (20) and assigns it to the variable x. The original value (10) is not modified.
+```
+
+Collection types do not need to do this and thus appending items is a breeze, and shouldn't hinder the app performance.
+
+```csharp
+List<string> names = new List<string> { "Alice", "Bob", "Charlie" };
+names[1] = "Alex"; // Modifying the second element of the list from "Bob" to "Alex"
+names.Add("David"); // Adding a new element to the list
+names.RemoveAt(0); // Removing the first element from the list
+```
+
+*Important*
+
+Methods that require concatenation of strings in exhaustive manner means recursive loop of construction and destruction of strings instances to continuously update its value. This is because the string type is immutable
+
+Use StringBuilder class for the for the mutable counterpart to improve app performance
