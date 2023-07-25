@@ -65,3 +65,55 @@ partial class Program
 ```
 
 By *inserting* our static method to the delegate, invoking the instance of the delegate followed with arguments similar to what we pass to the method itself would return the value of the method.
+
+### Array of Delegates
+
+This operation emphasizes the ability of delegate to be instantiated as an array just like other types in C#
+
+```csharp
+public class Operation
+{
+    public static void Add(int a, int b)
+    {
+        Console.WriteLine("Addition={0}",a + b);
+    }
+
+    public static void Multiple(int a, int b)
+    {
+        Console.WriteLine("Multiply={0}", a * b);
+    }
+}
+
+class Program
+{
+    delegate void DelOp(int x, int y);
+
+    static void Main(string[] args)
+    {
+        // Delegate instantiation
+        DelOp[] obj =
+        {
+            new DelOp(Operation.Add),
+            new DelOp(Operation.Multiple)
+        };
+
+        for (int i = 0; i < obj.Length; i++)
+        {
+            obj[i](2, 5);
+            obj[i](8, 5);
+            obj[i](4, 6);
+        }
+        Console.ReadLine();
+    }
+}
+```
+
+Here the instance creation of delegates are assigned to the array of delegates. The addition operation is executed based on the order of the array assignment.
+
+Observe how in this example we have to create multiple delegate instances rather than implementing multiple methods to a single delegate. The latter could be a better option when memory resource is limited and multiple methods are required to be associated with this delegate.
+
+In contrast, the former could be used when you require to perform two methods that have a different signature in succession
+
+### Multicast Delegate
+
+A single delegate instance can be used to store multiple methods to invoke by the first in first out configuration.
