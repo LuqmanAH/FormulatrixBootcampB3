@@ -28,11 +28,11 @@ public class TreasureBox : IDisposable
             if (disposing)
             {
                 // TODO: dispose managed state (managed objects)
+                Console.WriteLine($"Treasure {_TreasureBoxID} has been looted by the Disposer");
             }
 
             // TODO: free unmanaged resources (unmanaged objects) and override finalizer
             // TODO: set large fields to null
-            Console.WriteLine($"Treasure {_TreasureBoxID} has been looted by the Disposer");
             _disposedValue = true;
         }
     }
@@ -62,7 +62,8 @@ public class Program
     public static void Main()
     {
         // Stopwatch stopwatch= Stopwatch.StartNew();
-        GenerateTreasureBoxes(); 
+        GenerateTreasureBoxes();
+        GC.Collect();
          // * GC dengan Finalizer (Tidak safe)
     
         TreasureBox programTreasure1 = new TreasureBox(78, 96);
