@@ -66,6 +66,117 @@ partial class Program
 
 By *inserting* our static method to the delegate, invoking the instance of the delegate followed with arguments similar to what we pass to the method itself would return the value of the method.
 
+### Different Ways to Assign Method to Delegate
+
+The key consideration when assigning a method to delegate is that the method should have the same signature as the delegate.
+
+The 'signature' can be comprehended by examining the example below
+
+```csharp
+public delegate int OperationDelegate (int x, int y);
+
+public class Operation
+{
+    public int AdditionOperation(int a, int b)
+    {
+        return a + b;
+    }
+}
+```
+
+The delegate `OperationDelegate` has similar signature with `AdditionOperation` of the `Operation` class. This is because both has the same access modifier, return value type and parameters type, and also the number of parameters required by the method.
+
+Assignment of `AdditionOperation` to the delegate can be done by explicitly inserting the method when creating the instance of the delegate
+
+```csharp
+public delegate int OperationDelegate (int x, int y);
+
+public class Operation
+{
+    public static int AdditionOperation(int a, int b)
+    {
+        int res = a + b;
+        return res;
+    }
+    public static int MultiplicationOperation(int c, int d)
+    {
+        int res = c * d;
+        return res;
+    }
+}
+
+public class Program
+{
+    static void Main (string[] args)
+    {
+        OperationDelegate opDelegate = new(Operation.AdditionOperation);
+    
+        Console.WriteLine(opDelegate(3,4));
+        Console.WriteLine(opDelegate.Invoke(4,5));
+
+        opDelegate -= Operation.AdditionOperation;
+        opDelegate += Operation.MultiplicationOperation;
+        Console.WriteLine(opDelegate(3,4));
+        Console.WriteLine(opDelegate.Invoke(4,5));
+
+        opDelegate = null;
+
+    }
+}
+```
+
+Method assigned to the delegate is known as **Handler Method**.This handler method is invoked whenever the variable of the delegate is called with the required arugments or by using its built in method `Invoke()`.
+
+Methods encapsulated by the instance of delegate can further be modified by using `-=` and `+=` to remove or add methods respectively.
+
+Multiple methods assignment to an instance of delegate is possible and introduce a unique behavior but will be discussed in depth in the following materials.
+
+Observe how we can nullify the content of delegates by explicitly assign a null value to the variable.
+
+### Callback Delegate
+
+what happens when you pass a delegate object as an argument of one method?
+
+basically you are giving the said method flexibility in which the method now has the ability to call other methods that the delegate provided point to. we can invoke this other methods at any point inside the first method definition.
+
+we commonly describe this as **Callback Delegate**.
+
+```csharp
+public delegate void Caller(string message);
+
+public class Example
+{
+    public static void ProcessManager(string message, Caller callback)
+    {
+        //* the way you would invoke the caller fully depends on how you want the behavior of the caller delegate
+        
+        Console.WriteLine($"Sedang diProses: {message}");
+        callback("uhuy"); 
+        Console.WriteLine($"Sedang diProses: {message} kedua");
+        callback("ihiy");
+        callback("ahoy");
+    }
+
+    public static void CallbackDisplayer(string callbackArgs)
+    {
+        Console.WriteLine($"Callback Received: {callbackArgs}");
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Caller callbackDelegate = new Caller(Example.CallbackDisplayer);
+
+        Example.ProcessManager("The Anget", callbackDelegate);
+    }
+}
+```
+
+I know the above example is dumpster fire. but the key takeaway is that the `ProcessManager` method has full control over the Caller delegate object and how it would behave inside the definition of the `ProcessManager` method.
+
+`ProcessManager` is abstracted by what methods the `Caller` object is currently points to. it actually doesn't give a damn.
 ### Array of Delegates
 
 This operation emphasizes the ability of delegate to be instantiated as an array just like other types in C#
