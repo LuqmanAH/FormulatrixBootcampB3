@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conditional_Compilation", "Conditional_Compilation", "{F0DCDFFD-7E30-47C5-8190-F60E0C32B541}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conditional_Compilation", "Conditional_Compilation\Conditional_Compilation\Conditional_Compilation.csproj", "{6DAEAA5A-B67B-4364-A484-B6BCE7E13EB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hot_Reload", "Hot_Reload", "{0556DEB0-43CC-44E7-8105-303A872F5CE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hot_Reload", "Hot_Reload\Hot_Reload\Hot_Reload.csproj", "{88597195-3138-4CE9-A782-D5D25C5BF2C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Debug_Trace", "Debug_Trace", "{8375A33A-E0CA-4220-84B9-10D0C5E1F8D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debug_Trace", "Debug_Trace\Debug_Trace\Debug_Trace.csproj", "{50D7B3D1-0A78-4992-BD5A-082D646467B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conditional_Compilation_2", "Conditional_Compilation_2", "{5389803D-63A2-4E88-905B-8DF378F16F31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conditional_Compilation_2", "Conditional_Compilation_2\Conditional_Compilation_2\Conditional_Compilation_2.csproj", "{9789A01E-B88B-4189-AFBE-2CFA8D95227A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Debug and Trace", "Debug and Trace", "{59522DFB-ECE4-4514-AEAB-138808655EE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debug and Trace", "Debug and Trace\Debug and Trace\Debug and Trace.csproj", "{B4FDC3F0-F4B5-441E-9DD8-B9AD840D568A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DAEAA5A-B67B-4364-A484-B6BCE7E13EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DAEAA5A-B67B-4364-A484-B6BCE7E13EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DAEAA5A-B67B-4364-A484-B6BCE7E13EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DAEAA5A-B67B-4364-A484-B6BCE7E13EB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88597195-3138-4CE9-A782-D5D25C5BF2C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88597195-3138-4CE9-A782-D5D25C5BF2C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88597195-3138-4CE9-A782-D5D25C5BF2C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88597195-3138-4CE9-A782-D5D25C5BF2C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50D7B3D1-0A78-4992-BD5A-082D646467B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D7B3D1-0A78-4992-BD5A-082D646467B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D7B3D1-0A78-4992-BD5A-082D646467B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D7B3D1-0A78-4992-BD5A-082D646467B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9789A01E-B88B-4189-AFBE-2CFA8D95227A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9789A01E-B88B-4189-AFBE-2CFA8D95227A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9789A01E-B88B-4189-AFBE-2CFA8D95227A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9789A01E-B88B-4189-AFBE-2CFA8D95227A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4FDC3F0-F4B5-441E-9DD8-B9AD840D568A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4FDC3F0-F4B5-441E-9DD8-B9AD840D568A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4FDC3F0-F4B5-441E-9DD8-B9AD840D568A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4FDC3F0-F4B5-441E-9DD8-B9AD840D568A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6DAEAA5A-B67B-4364-A484-B6BCE7E13EB8} = {F0DCDFFD-7E30-47C5-8190-F60E0C32B541}
+		{88597195-3138-4CE9-A782-D5D25C5BF2C7} = {0556DEB0-43CC-44E7-8105-303A872F5CE0}
+		{50D7B3D1-0A78-4992-BD5A-082D646467B6} = {8375A33A-E0CA-4220-84B9-10D0C5E1F8D4}
+		{9789A01E-B88B-4189-AFBE-2CFA8D95227A} = {5389803D-63A2-4E88-905B-8DF378F16F31}
+		{B4FDC3F0-F4B5-441E-9DD8-B9AD840D568A} = {59522DFB-ECE4-4514-AEAB-138808655EE3}
+	EndGlobalSection
+EndGlobal
