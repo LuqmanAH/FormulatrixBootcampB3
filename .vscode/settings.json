@@ -1,7 +1,3 @@
 {
-<<<<<<< HEAD
-    "dotnet.defaultSolution": "Week4/Debugging_Methods/Debugging_Methods.sln"
-=======
-    "dotnet.defaultSolution": "Week2/Day9/Day9.sln"
->>>>>>> bc60ca6cddee8dae1437c3790de01bee9040cb49
+    "dotnet.defaultSolution": "Week4/Async Concurr/Async Concurr.sln"
 }

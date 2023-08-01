@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AsyncAwait-Task-Trial", "AsyncAwait-Task-Trial", "{45DD16F2-3E92-4B63-91DF-F57ABEC16E12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwait-Task-Trial", "AsyncAwait-Task-Trial\AsyncAwait-Task-Trial\AsyncAwait-Task-Trial.csproj", "{0325256B-A202-4E45-ADD0-85D1C22391AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generic Tasks", "Generic Tasks", "{000AA497-B986-4ECC-99B3-4D5531AB4089}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generic Tasks", "Generic Tasks\Generic Tasks\Generic Tasks.csproj", "{6A4E9D67-567A-4DBC-90ED-781A295DC793}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0325256B-A202-4E45-ADD0-85D1C22391AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0325256B-A202-4E45-ADD0-85D1C22391AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0325256B-A202-4E45-ADD0-85D1C22391AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0325256B-A202-4E45-ADD0-85D1C22391AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A4E9D67-567A-4DBC-90ED-781A295DC793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A4E9D67-567A-4DBC-90ED-781A295DC793}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A4E9D67-567A-4DBC-90ED-781A295DC793}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A4E9D67-567A-4DBC-90ED-781A295DC793}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0325256B-A202-4E45-ADD0-85D1C22391AD} = {45DD16F2-3E92-4B63-91DF-F57ABEC16E12}
+		{6A4E9D67-567A-4DBC-90ED-781A295DC793} = {000AA497-B986-4ECC-99B3-4D5531AB4089}
+	EndGlobalSection
+EndGlobal
