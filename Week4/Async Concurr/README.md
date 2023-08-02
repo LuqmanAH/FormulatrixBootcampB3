@@ -154,3 +154,31 @@ class Program
 
 - async modifier => notify the compiler to mark that method as asynchronous
 - await => suspend process waiting a passed Task to be completed (_Task.IsCompleted_)
+
+## Cancellation Token
+
+- To prevent undefined instance in memory as a result of the `Thread.Abort()` method.
+- A way to end a Task class instance safely, without drawbacks provided by `Abort()`
+
+### **Cancellation Token**
+
+- The _status_ of the Cancellation
+
+### **Cancellation Token Source**
+
+- Way to invoke Cancellation Token
+- Way to alter the _status_ of the Token
+- When the _status_ is set `true` the corresponding thread will terminate and change to the thread that calls / invoke the token
+
+## DeadLock Scenario
+
+- Condition where two different threads has dependency on each other
+- The dependant field or variable is not provided by any of the thread
+
+## Racing Condition
+
+- Condition where two different active threads modify / handle one similar variable
+- These threads require to apply different operation to the variable such that the value of the variable can not be determined
+- Important when the real-time changes of a variable handled by thread is monitored
+- Can be solved in C# by using the `lock` or `monitor` to encapsulate variable
+- or use thread signaling methods
