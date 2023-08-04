@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xml Serialize Deserialize", "Serialization Basics\xml Serialize Deserialize.csproj", "{9051CD13-D2EC-4699-9B13-D683AFBD7E8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Json Serialize Deserialize", "Json Serialize Deserialize\Json Serialize Deserialize.csproj", "{2C4EC9F7-D3F1-4680-BA23-B0A4C19705A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Contract Serialization", "Data Contract Serialization\Data Contract Serialization.csproj", "{BBB04292-3533-43DF-9A8D-98D3824D8789}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9051CD13-D2EC-4699-9B13-D683AFBD7E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9051CD13-D2EC-4699-9B13-D683AFBD7E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9051CD13-D2EC-4699-9B13-D683AFBD7E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9051CD13-D2EC-4699-9B13-D683AFBD7E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C4EC9F7-D3F1-4680-BA23-B0A4C19705A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C4EC9F7-D3F1-4680-BA23-B0A4C19705A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C4EC9F7-D3F1-4680-BA23-B0A4C19705A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C4EC9F7-D3F1-4680-BA23-B0A4C19705A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBB04292-3533-43DF-9A8D-98D3824D8789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBB04292-3533-43DF-9A8D-98D3824D8789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBB04292-3533-43DF-9A8D-98D3824D8789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBB04292-3533-43DF-9A8D-98D3824D8789}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
