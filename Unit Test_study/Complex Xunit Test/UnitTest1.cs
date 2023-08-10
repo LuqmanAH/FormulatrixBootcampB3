@@ -1,5 +1,3 @@
-using Xunit;
-
 namespace Complex_Xunit_Test;
 
 public class UnitTest1
@@ -16,4 +14,17 @@ public class UnitTest1
         Assert.Equal(expected._imag, complexAdd._imag);
         Assert.Equal(expected._real, complexAdd._real);
     }
+
+    [Theory]
+    [InlineData(3, 3, 3, 3, 6, 6)]
+    public void ComplexAddOperatorBatchTest(int realA, int imagA, int realB, int imagB, int realExpected, int imagExpected)
+    {
+        Complex complex1 = new(realA, imagA);
+        Complex complex2 = new(realB, imagB);
+        Complex result = complex1 + complex2;
+
+        Assert.Equal(result._real, realExpected);
+        Assert.Equal(result._imag, imagExpected);
+    }
+
 }
