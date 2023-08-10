@@ -3,11 +3,12 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
-    <RootNamespace>Callback_Delegate_refresher</RootNamespace>
+    <RootNamespace>imaginary_number</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Program.cs" />
+    <Content Include="ComplexNumber.cs" />
   </ItemGroup>
 </Project>
