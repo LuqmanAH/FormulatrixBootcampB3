@@ -8,7 +8,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Program.cs" />
-    <Content Include="ConventionalPiece.cs" />
-    <Content Include="ConventionalPieceSet.cs" />
+    <Content Include="Manager.cs" />
+    <Content Include="Employee.cs" />
+    <Content Include="Engineer.cs" />
+    <Content Include="EmployeePortal.cs" />
   </ItemGroup>
 </Project>
