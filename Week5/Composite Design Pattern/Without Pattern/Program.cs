@@ -1,7 +1,7 @@
-﻿using CompositePattern;
-namespace CompositePatternProgram;
+﻿using NoPattern;
+namespace NoPatternProgram;
 
-public class CompositePatternProgram
+public class NoPatternProgram
 {
     static void Main()
     {
@@ -14,13 +14,16 @@ public class CompositePatternProgram
         Engineer ahmat = new Engineer("ahmat");
         Engineer soleh = new Engineer("soleh");
 
-        string workInfo = employeePortal.ManagerAssignWork(burhan, ahmat, soleh);
+        string workInfo = employeePortal.ManagerAssignWork(burhan, soleh, ahmat);
         Display(workInfo);
 
-        Separate("------");
+        Separate("-----");
 
-        string workManager = employeePortal.ManagerAssignWork(khoirudin, alek);
-        Display(workManager);
+        //! compilation error because type mismatch : alek
+        // string workManager = employeePortal.ManagerAssignWork(khoirudin, alek);
+        // Display(workManager);
+
+
     }
 
     static void Display<T>(T message)

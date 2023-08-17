@@ -13,7 +13,7 @@ public class Manager : Employee
     }
     public override string Work()
     {
-        string workDone = "managing some important stuffs";
+        string workDone = $"{Name} is managing some important stuffs";
         foreach (Employee emp in _employeesHandled)
         {
             workDone += $"\n{emp.Name} is now {emp.Work()}";
@@ -22,7 +22,7 @@ public class Manager : Employee
     }
     public override void AddSubordinate(Employee[] employees)
     {
-        foreach (Employee emp in employees)
+        foreach (Employee emp in employees.Where(emp => !emp.HasSubordinates()))
         {
             _employeesHandled.Add(emp);
         }

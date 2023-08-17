@@ -2,12 +2,13 @@
 
 public class EmployeePortal
 {
-    public string AssignWork(Employee employee, params Employee[] subordinates)
+    public string ManagerAssignWork(Employee manager, params Employee[] subordinates)
     {
-        if (employee.HasSubordinates())
+        if (manager.HasSubordinates())
         {
-            employee.AddSubordinate(subordinates);
+            manager.AddSubordinate(subordinates);
+            return manager.Work();
         }
-        return employee.Work();
+        return manager.Work();
     }
 }
