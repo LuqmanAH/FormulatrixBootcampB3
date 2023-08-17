@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Composite Design Pattern</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+		<!-- Theme used for syntax highlighted code -->
+<link rel="stylesheet" href="plugin/highlight/zenburn.min.css" id="highlight-theme"></head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<section data-markdown  ><textarea data-template>
+# Composite Design Pattern
+
+Luqman Al Helmy | FMLX bootcamp B3 | 18/08/2023
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## What do they have in common?
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+![Google ex ceo](media/Manager.webp) <!-- .element: style="height:50vh; max-width:80vw; image-rendering: crisp-edges;" -->
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+![engineer](media/engineer.jpeg) <!-- .element: style="height:50vh; max-width:80vw; image-rendering: crisp-edges;" -->
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+They both:
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+They both: 
+- can be considered as employees
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+They both: 
+- can be considered as employees
+- but the latter must report to the former
+
+Note:
+How can we as a client can delegate work to them?
+
+</textarea></section>
+<section>
+<section data-markdown  data-background-color="cadetblue"><textarea data-template>
+
+**two approach:**
+
+</textarea></section>
+<section data-markdown  data-background-color="cadetblue"><textarea data-template>
+
+approach 1 : tell **every** engineer to create your requests
+
+</textarea></section>
+<section data-markdown  data-background-color="cadetblue"><textarea data-template>
+
+approach 2 : tell **the manager** about our project, and let them do the magic
+
+Note:
+which one more time efficient?; now how about this?
+
+</textarea></section>
+</section>
+<section data-markdown  data-background-color="cornsilk"><textarea data-template>
+
+![without pattern class diag](media/without%20pattern.png) <!-- .element: style="height:50vh; max-width:80vw; image-rendering: crisp-edges;" -->
+
+</textarea></section>
+<section data-markdown  data-background-color="cornsilk"><textarea data-template>
+
+![Composite Pattern](media/with%20pattern.png) <!-- .element: style="height:70vh; max-width:80vw; image-rendering: crisp-edges;" -->
+
+</textarea></section>
+<section data-markdown  data-background-color="cornsilk"><textarea data-template>
+
+Which one more reusable?
+
+</textarea></section>
+<section data-markdown  data-background-color="cornsilk"><textarea data-template>
+
+![Composite Pattern](media/with%20pattern.png) <!-- .element: style="height:70vh; max-width:80vw; image-rendering: crisp-edges;" -->
+
+This implements **Composite Structural Pattern**
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+```cs
+public abstract class Employee
+{
+
+}
+
+public class Manager : Employee
+{
+    protected List<Employee> _employeesHandled = new List<Employee>();
+}
+
+public class Engineer : Employee
+{
+
+}
+```
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Pros:
+1. Flexibility
+2. Uniformity
+3. Extensibility
+4. Abides OCP
+5. Reusability
+
+Note:
+Flexible Object Structure: The Composite pattern allows you to create complex structures of objects that can represent part-whole relationships. This provides flexibility in designing and representing hierarchies.
+
+Uniform Treatment: Clients can treat individual objects and compositions of objects uniformly through the common interface provided by the Component class. This simplifies client code and makes it easier to work with complex structures.
+
+Ease of Adding New Elements: Adding new types of elements to the hierarchy is relatively easy. You can create new Leaf or Composite classes that implement the Component interface, without affecting existing classes.
+
+Recursion and Traversal: The pattern encourages recursive processing and traversal of the object structure. This can be useful for operations that need to be performed on the entire hierarchy.
+
+Open-Closed Principle: The Composite pattern follows the Open-Closed Principle, as you can add new types of components without modifying existing code.
+
+Code Reusability: The pattern promotes code reuse, as both Leaf and Composite classes share a common interface and can be used interchangeably in the client code.
+
+</textarea></section>
+<section data-markdown ><textarea data-template>
+
+## Cons:
+1. Added complexity
+2. Limited type checking
+3. Difficult
+</textarea></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+Reveal.initialize({
+controls : false,
+markdown : {smartypants: true},
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+	</body>
+</html>
