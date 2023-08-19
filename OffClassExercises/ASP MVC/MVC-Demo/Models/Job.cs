@@ -25,4 +25,5 @@ public class Job
     [DataType(DataType.Date)]
     public string JobExpiredDate { get; set; }
     public string? ProcessStatus { get; set; }
+    public virtual JobCategory Department {get; set;} = null!;
 }
