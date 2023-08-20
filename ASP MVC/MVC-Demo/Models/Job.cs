@@ -25,4 +25,8 @@ public class Job
     [DataType(DataType.Date)]
     public string JobExpiredDate { get; set; }
     public string? ProcessStatus { get; set; }
+
+    [ForeignKey("CategoryId")]
+    [InverseProperty("Jobs")]
+    public virtual JobCategory Division {get; set;} = null!;
 }
