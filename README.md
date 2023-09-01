@@ -5,14 +5,9 @@ Daily C# work report of Muhammad Luqman Al Helmy on Formulatrix Bootcamp Batch 3
 
 | Folder Name| Description |
 | ------------ | ------------- |
-| Day X | Folder containing .sln file for handling projects on the corresponding day |
-| Day X\ProgramFolder | Folder containing .csproj and .cs file(s) written on the corresponding day |
+| Week 1 | Basics of C# OOP, refreshers on Primitives |
+| Week 2| Advanced C# topics, Delegate, Events, Op Overloading |
+| Week 3| C# collection data strutures|
+| Week 4| Advanced topic: Memory profiling, async / concurrency|
+| Week 5| Entity Framework, Design pattern, Unit Testing|
 | OffClassExercises | Collection of cs projects written outside bootcamp class |
-
-## Solution File
-As of 8th of July 2023, each class day will contain their own solution files
-
-As for the OffClass excercises, new project shall be added under the same solution file `OffClassExercises.sln`
-
-## Project Readme Files
-**TODO**: Write readme files for each daily projects and key takeaway concept of every class day
