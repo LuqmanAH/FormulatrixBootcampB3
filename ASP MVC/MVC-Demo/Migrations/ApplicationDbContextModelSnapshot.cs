@@ -22,6 +22,9 @@ namespace MVC_Demo.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("IsJobAvailable")
                         .HasColumnType("INTEGER");
 
@@ -54,7 +57,40 @@ namespace MVC_Demo.Migrations
 
                     b.HasKey("JobId");
 
+                    b.HasIndex("CategoryId");
+
                     b.ToTable("Jobs");
+                });
+
+            modelBuilder.Entity("MVC_Demo.Models.JobCategory", b =>
+                {
+                    b.Property<int>("CategoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CategoryId");
+
+                    b.ToTable("jobCategories");
+                });
+
+            modelBuilder.Entity("MVC_Demo.Models.Job", b =>
+                {
+                    b.HasOne("MVC_Demo.Models.JobCategory", "Division")
+                        .WithMany("Jobs")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Division");
+                });
+
+            modelBuilder.Entity("MVC_Demo.Models.JobCategory", b =>
+                {
+                    b.Navigation("Jobs");
                 });
 #pragma warning restore 612, 618
         }

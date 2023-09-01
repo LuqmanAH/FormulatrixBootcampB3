@@ -6,6 +6,7 @@ namespace MVC_Demo.Data;
 public class ApplicationDbContext : DbContext
 {
     public DbSet<Job> Jobs{ get; set; } = default!;
+    public DbSet<JobCategory> JobCategories {get; set; } = default!;
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
         
